@@ -1,9 +1,4 @@
-<?php
-$usuario = $_POST['usuario'];
-$password = $_POST['password'];
-$texto = $_POST['mensaje'];
 
-?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -79,69 +74,48 @@ $texto = $_POST['mensaje'];
           <!--Inici form-->
           <div class="container" id="contenido-form-ticket">
           <!-- <div class="row"> -->
+          <div class="row align-items-center justify-content-center gap-5">  
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
-              <samp>VENTA</samp>
-              <h3>VALOR DE TICKET $200</h3>
-          </div>
-          <form>
-          <div class="row">
-           
-
-             
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="nombre" required id="txtnombre">
-              </div>
-
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Apellido" aria-label="apellido" required id="txtapellido">
-              </div>
-              <br> <br> <br>
-            
-  
-              <div class="mb-3">
-                
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo" required >
-              </div>
-
-              <div class="col">
-                <label for="" class="form-label">Cantidad</label>
-                <input type="number" min="1" class="form-control" placeholder="Cantidad" aria-label="cantidad" id="cantidad" required>
-              </div>
-
-              <div class="col">
-                <label for="" class="form-label">Categoria</label>
-                <select class="form-select" aria-label="Default select example" id="categoria" required>
-                  <option selected disabled>Seleccione un opción </option>
-                  <option value="1">Estudiante</option>
-                  <option value="2">Junior</option>
-                  <option value="3">Trainee</option>
-                </select>
-              </div>
-
-              <br> <br> <br> <br> 
               
-              <div class="container col-lg-12 rectangulo position-relative">
-
-              <h5 class="position-absolute top-50 start-0 translate-middle-y" id="totalapagar">&nbsp;&nbsp;&nbsp;&nbsp;Total a Pagar : $ <samp id="resultado"></samp></h5>
-              </div>
-
-            
-
-              <br> <br> <br>
-              
-
+              <h3>Ingresá a tu cuenta</h3>
           </div>
-          <div class="row">
-          <div class="col">
-          <button onclick="borrarTotal()" type="reset" class="btn btn-success colorBtnEnviar 
-          col-xs-12 col-sm-12 col-md-12 col-lg-12">Borrar</button>
-        </div>
-        <div class="col">
-          <button onclick="calcularTotal()" type="button" class="btn btn-success colorBtnEnviar
-          col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="botonresumen">Resumen</button>
-        </div>
-          </div>
-         </form>
+          <div class="col-3">
+				<img class="img-fluid" src="img/login.png" alt="Ingresá a tu cuenta">
+			</div>
+			</div>
+
+      <br>
+				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-grid" novalidate>
+					<div class="row gy-3">
+						<div class="col-12">
+							<input id="ingresaremail" name="ingresaremail" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required>
+							<div class="invalid-feedback">Ingresá tu e-mail</div>
+						</div>
+						<div class="col-12">
+							<input id="ingresarpassword" name="ingresarpassword" type="password" class="form-control" placeholder="Password" aria-label="Password" required>
+							<div class="invalid-feedback">Ingresá tu password</div>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col">
+							<button id="btn_ingresar" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ingresar</button>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-6">
+							<div class="form-check d-flex align-items-center justify-content-center gap-1">
+								<input name="recordarme" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+								<label class="form-check-label" for="flexCheckChecked">
+									Recordarme
+								</label>
+							</div>
+						</div>
+						<div class="col-6">
+							<button id="colorBtnEnviar" type="button" class="btn btn-outline-info w-100">Crear cuenta</button>
+						</div>
+
+					</div>
+				</form>
        </div>
       </div>
          <!--fin form-->
