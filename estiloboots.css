@@ -1,0 +1,303 @@
+
+.imgCard {
+   
+    width: 100%;
+    height: 100%;
+    /* 
+    width: auto;
+    height: auto;
+    */
+}
+.colorVerde{
+    color: #2B9E44 !important;
+}
+
+.colorCoral {
+    color: coral !important;
+}
+nav {
+    /*height: 70px;
+    height: 100%;
+    width: auto;
+    */
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color:#353A40 !important;
+    flex-direction: justify-content;
+
+}
+
+#carousel{
+    position:relative;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    
+   
+    
+}
+
+#texto-en-carousel{
+    text-align: right;
+    position: absolute;
+    
+    /* 
+    display: block;
+    width: 180px;
+    height: 65px; 
+    padding-top: 50px;
+    padding-left: 100px;
+    margin-right: -100px;
+     padding-right: 70px;
+   
+    */
+    padding-top: auto;
+    padding-bottom: auto;
+    
+    margin-top: -275px;
+    color:white;
+    filter: contrast(180%);
+    /*z-index: 20;*/
+    
+    
+}
+
+/*
+#divaux-carousel{
+    text-align: right;
+    position: absolute;
+    display: block;
+    /* width: 180px;
+    height: 65px; 
+    padding-top: 50px;
+    padding-left: 100px;
+    */
+ /*   
+    padding-top: auto;
+    padding-bottom: auto;
+    padding-right: 70px;
+    margin-top: -250px;
+    color:white;
+}
+*/
+#carouselExampleSlidesOnly{
+    position: static;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+/*para achicar el carousel*/
+.carousel-inner img {
+    width: 100%;
+    max-height: 540px;
+    filter: brightness(40%);
+    
+    
+}
+
+.carousel-inner{
+ max-height: 540px;
+}
+/* .carousel-item img {
+    z-index: -100;
+} */
+
+ 
+
+#titulo {
+    text-align:center;
+    align-items: center;
+}
+
+#tituloOradores {
+    text-align:center;
+    align-items: center;
+    
+}
+
+#contenido {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+
+#lugar {
+    display:flex;
+    /* margin: 0%;
+    padding: 0; */
+    align-items: justify-content;
+    background-color:#353A40;
+    
+}
+
+#lugar-texto{
+    background-color:#353A40;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: auto; */
+    
+
+}
+#img-lugar{
+    margin: 0%;
+    padding: 0;
+}
+
+#contenido-form {
+    /*
+    padding-top: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+    */
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+u.dotted{
+   
+    text-decoration:underline dotted; 
+    color: black;
+  }
+.colorGris{
+    color:rgb(130, 129, 133);
+}
+
+.colorBtnEnviar {
+    background-color:#96C93E;
+}
+.BtnComprarTickets{
+    background-color:#19a051;
+    /* background-color:#07b34e; */
+}
+footer {
+    
+    
+    color: white;
+    width:auto; 
+    background-image: linear-gradient(120deg, #283a45 50%, rgb(22, 82, 119)  100%);
+    /*
+    background-color:#224a62; 
+    text-indent: 150px;
+    height: 40px;
+    */
+
+}
+/*
+/* lo que use para el footer
+https://getbootstrap.com/docs/5.1/layout/grid/
+
+https://pinetools.com/es/obtener-colores-imagen
+
+*/
+
+.botones {
+    font: bold !important ;
+
+}
+
+.btn {
+    bottom: font-weight-bold;
+}
+
+
+/*
+pone el texto en negrita en boostrap
+fw-bold
+*/
+
+/*
+https://www.jose-aguilar.com/blog/como-funcionan-las-imagenes-en-bootstrap-4/#codesyntax_2
+
+*/
+
+/*
+para acomdar el texto a la derecha en el carusel
+https://getbootstrap.com/docs/5.1/utilities/flex/
+*/
+
+/*para achicar el carousel*/
+/* 
+https://es.stackoverflow.com/questions/16196/redimensionar-carousel-bootstrap-3
+*/
+
+/*aclarar y oscureser imagenes con CSS*/
+/*
+https://www.bufa.es/css-aclarar-oscurecer-imagenes/
+*/
+
+/*
+https://lenguajecss.com/css/efectos/filtros-css/
+*/
+
+/*
+para lo del subrayado puntiado .. #9 
+https://www.mejorcodigo.com/p/51837.html#:~:text=De%20hecho%2C%20la%20etiqueta%20%3Cu,el%20CSS%20incorporado%20del%20navegador.&text=Sin%20CSS%2C%20b%C3%A1sicamente%20se%20atasca,texto%20y%20agregue%20el%20subrayado.
+*/
+
+
+#contenidoTickets{
+    padding-left: 200px;
+    padding-right: 200px; 
+    padding-bottom: 30px;
+    padding-top: 30px;
+    justify-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+
+    
+}
+.cuadrado {
+    max-width: 13rem; 
+    max-height: 13rem; 
+    min-width: 10rem; 
+    min-height: 10rem; 
+   
+    border: solid;
+    /* display: flex; */
+    
+   
+}
+
+.rectangulo{
+    background-color: #D3FFFF;
+    border-radius: 8px;
+    max-height: 50px;
+    max-width: 745px;
+    color: rgb(35, 134, 247);
+    
+}
+
+#contenido-form-ticket {
+    /*
+    padding-top: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+    */
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#tituloticket {
+    text-align:center;
+    align-items: center;
+    
+}
+
+.gris-claro{
+    color:rgb(163, 159, 159);
+    font-size: small;
+}

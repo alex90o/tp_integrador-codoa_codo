@@ -1,0 +1,194 @@
+<?php
+$usuario = $_POST['usuario'];
+$password = $_POST['password'];
+$texto = $_POST['mensaje'];
+
+?>
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="stylesheet" href="estiloboots.css">
+    <title>Trabajo Práctico Integrador</title>
+  </head>
+  
+  <body>
+    <div class="conteiner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+          <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <a class="navbar-brand" href="index.html"><img class="img-fluid" src="img/codoacodo.png" alt="codoacodo.png"></a>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1" id="titulo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <a class="navbar-brand" href="index.html">Conf Bs As</a>
+          
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#texto-en-carousel">La conferencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#tituloOradores">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#lugar">El lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contenido-form">Conviértete en orador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link colorVerde" href="comprarTickets.html">Comprar tickets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link colorCoral" href="registarse.php">Registarse</a>
+              </li>
+              
+
+              
+           
+            </ul>
+         
+          </div>
+        </div>
+        
+      </nav>
+         
+          </div>
+        </div>
+        
+      </nav>
+      <!--fin nav-->
+
+    </div>
+         
+      <div class="container-fluid">
+  
+    
+          <!--Inici form-->
+          <div class="container" id="contenido-form-ticket">
+          <!-- <div class="row"> -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
+              <samp>VENTA</samp>
+              <h3>VALOR DE TICKET $200</h3>
+          </div>
+          <form>
+          <div class="row">
+           
+
+             
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="nombre" required id="txtnombre">
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="apellido" required id="txtapellido">
+              </div>
+              <br> <br> <br>
+            
+  
+              <div class="mb-3">
+                
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo" required >
+              </div>
+
+              <div class="col">
+                <label for="" class="form-label">Cantidad</label>
+                <input type="number" min="1" class="form-control" placeholder="Cantidad" aria-label="cantidad" id="cantidad" required>
+              </div>
+
+              <div class="col">
+                <label for="" class="form-label">Categoria</label>
+                <select class="form-select" aria-label="Default select example" id="categoria" required>
+                  <option selected disabled>Seleccione un opción </option>
+                  <option value="1">Estudiante</option>
+                  <option value="2">Junior</option>
+                  <option value="3">Trainee</option>
+                </select>
+              </div>
+
+              <br> <br> <br> <br> 
+              
+              <div class="container col-lg-12 rectangulo position-relative">
+
+              <h5 class="position-absolute top-50 start-0 translate-middle-y" id="totalapagar">&nbsp;&nbsp;&nbsp;&nbsp;Total a Pagar : $ <samp id="resultado"></samp></h5>
+              </div>
+
+            
+
+              <br> <br> <br>
+              
+
+          </div>
+          <div class="row">
+          <div class="col">
+          <button onclick="borrarTotal()" type="reset" class="btn btn-success colorBtnEnviar 
+          col-xs-12 col-sm-12 col-md-12 col-lg-12">Borrar</button>
+        </div>
+        <div class="col">
+          <button onclick="calcularTotal()" type="button" class="btn btn-success colorBtnEnviar
+          col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="botonresumen">Resumen</button>
+        </div>
+          </div>
+         </form>
+       </div>
+      </div>
+         <!--fin form-->
+         
+        </div>
+      </div>
+      <br>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-1">
+              
+            </div>
+            <div class="col-10">
+              <div class="container">
+                <div class="row">
+                  <div class="col"><p>Preguntas Frecuentes</p></div>
+                  <div class="col"><p>Contáctanos</p></div>
+                  <div class="col"><p>Prensa</p></div>
+                  <div class="col"><p>Conferencias</p></div>
+                  <div class="col"><p>Términos y condiciones</p></div>
+                  <div class="col"><p>Privacidad</p></div>
+                  <div class="col"><p>Estudiantes</p></div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-1">
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>  <!--fin de todo-->
+   
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
