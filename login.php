@@ -77,82 +77,47 @@
           <div class="row align-items-center justify-content-center gap-5">  
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
               
-              <h3>Registarse</h3>
+              <h3>Ingresá a tu cuenta</h3>
           </div>
-        
+          <div class="col-3">
+				<img class="img-fluid" src="img/login.png" alt="Ingresá a tu cuenta">
+			</div>
 			</div>
 
       <br>
-      <div class="row align-items-center justify-content-center">
-		
-			<div class="col-5">
-				<form action="crear-cuenta.php" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
+				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-grid" novalidate>
 					<div class="row gy-3">
-						<div class="col-12 col-md-6">
-							<input id="nombre" name="crear_nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required="">
-							<div class="invalid-feedback">El nombre debe tener al menos dos letras</div>
-						</div>
-						<div class="col-12 col-md-6">
-							<input id="apellido" name="crear_apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required="">
-							<div class="invalid-feedback">El apellido debe tener al menos dos letras</div>
-						</div>
 						<div class="col-12">
-							<input id="email" name="crear_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
+							<input id="ingresaremail" name="ingresaremail" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required>
 							<div class="invalid-feedback">Ingresá tu e-mail</div>
 						</div>
 						<div class="col-12">
-							<input id="password" name="crear_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
-							<div class="invalid-feedback">La contraseña debe tener al menos 6 caracteres</div>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col">
-							<button id="btn_submit_crear" type="submit" class="btn btn-primary w-100">Crear Cuenta</button>
-						</div>
-						<div class="col">
-							<button id="btn_volver" type="button" class="btn btn-outline-info w-100">Volver</button>
-						</div>
-					</div>
-				</form>
-
-				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-none" novalidate="">
-					<div class="row gy-3">
-						<div class="col-12">
-							<input id="ingresar_email" name="ingresar_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
-							<div class="invalid-feedback">Ingresá tu e-mail</div>
-						</div>
-						<div class="col-12">
-							<input id="ingresar_password" name="ingresar_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
+							<input id="ingresarpassword" name="ingresarpassword" type="password" class="form-control" placeholder="Password" aria-label="Password" required>
 							<div class="invalid-feedback">Ingresá tu password</div>
 						</div>
 					</div>
 					<div class="row mt-4">
 						<div class="col">
-							<button id="btn_ingresar" type="submit" class="btn btn-primary w-100">Ingresar</button>
+							<button id="btn_ingresar" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ingresar</button>
 						</div>
 					</div>
 					<div class="row mt-4">
 						<div class="col-6">
 							<div class="form-check d-flex align-items-center justify-content-center gap-1">
-								<input name="recordarme" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+								<input name="recordarme" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
 								<label class="form-check-label" for="flexCheckChecked">
 									Recordarme
 								</label>
 							</div>
 						</div>
 						<div class="col-6">
-							<button id="btn_crear" type="button" class="btn btn-outline-info w-100">¿No tenés cuenta? Crear</button>
-						</div>
+							<a href="registarse.php">
+              <button id="colorBtnEnviar" type="button" class="btn btn-outline-info w-100">Crear cuenta</button>
+              </a>
+            </div>
 
 					</div>
 				</form>
-
-			</div>
-
-      <div class="col-3">
-				<img class="img-fluid" src="img/pngtree-notepad-icon-image_1130962.jpg">
-			</div>
-		</div>
        </div>
       </div>
          <!--fin form-->
