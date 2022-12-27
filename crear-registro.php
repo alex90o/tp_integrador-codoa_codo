@@ -1,3 +1,40 @@
+<?php
+//echo "hola soy el regsitro";
+//nombre de BD: integrador_codo_a_codo
+
+//metodos de conexion con la mylsql -- PDO
+
+/*
+1-"localHost" ip(192.168.1.1)
+
+*/
+
+$conexion = mysqli_connect("localhost","root", "", "integrador_codo_a_codo");
+$estado="";
+
+if(mysqli_connect_errno()){
+
+    $estado="Error no se conecto a la base de datos";
+}else{
+    $estado="Registro Guarado Correctamente";
+}
+
+
+/*$consultas = mysqli_query($conexion,"SELECT * FROM registro");
+
+echo "<pre>";
+var_dump($consultas);
+
+echo "</pre>";
+
+$listado = mysqli_fetch_assoc($consultas);
+
+echo "<pre>";
+var_dump($listado);
+
+echo "</pre>";
+*/
+?>
 
 <!doctype html>
 <html lang="es">
@@ -76,90 +113,40 @@
           <!-- <div class="row"> -->
           <div class="row align-items-center justify-content-center gap-5">  
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
-              
-              <h3>Registarse</h3>
+        <?php
+        echo "<h3>";
+        echo $estado;
+        echo "</h3>";
+        ?>
+
           </div>
-        
+          <div class="col-3">
+                <?php
+                if($estado=="Registro Guarado Correctamente"){
+                    echo'<img class="img-fluid" src="img/guardado_correcto.png" alt="guardado_correcto">';
+                }
+                
+                else 
+                echo'<img class="img-fluid" src="img/guardado_incorectocorrecto.png" alt="guardado_correcto">';
+                ?>
+				
 			</div>
 
-      <br>
-      <div class="row align-items-center justify-content-center">
-		
-			<div class="col-5">
-				<form action="crear-registro.php" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
-					<div class="row gy-3">
-						<div class="col-12 col-md-6">
-							<input id="nombre" name="crear_nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required="">
-							
-						</div>
-						<div class="col-12 col-md-6">
-							<input id="apellido" name="crear_apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required="">
-							
-						</div>
-						<div class="col-12">
-							<input id="email" name="crear_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
-							
-						</div>
-						<div class="col-12">
-							<input id="password" name="crear_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
-						
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col">
-							<button id="btn_submit_crear" type="submit" class="btn btn-primary w-100">Crear Registro</button>
-						</div>
-						<div class="col">
-							<!-- <button id="btn_volver" type="button" class="btn btn-outline-info w-100">Volver</button> -->
-              <a href="javascript:history.back()" class="btn btn-outline-info w-100"> Volver Atrás</a>
-						</div>
-					</div>
-				</form>
+            
 
-				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-none" novalidate="">
-					<div class="row gy-3">
-						<div class="col-12">
-							<input id="ingresar_email" name="ingresar_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
-							<div class="invalid-feedback">Ingresá tu e-mail</div>
-						</div>
-						<div class="col-12">
-							<input id="ingresar_password" name="ingresar_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
-							<div class="invalid-feedback">Ingresá tu password</div>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col">
-							<button id="btn_ingresar" type="submit" class="btn btn-primary w-100">Ingresar</button>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col-6">
-							<div class="form-check d-flex align-items-center justify-content-center gap-1">
-								<input name="recordarme" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-								<label class="form-check-label" for="flexCheckChecked">
-									Recordarme
-								</label>
-							</div>
-						</div>
-						<div class="col-6">
-							<button id="btn_crear" type="button" class="btn btn-outline-info w-100">¿No tenés cuenta? Crear</button>
-						</div>
-
-					</div>
-				</form>
-
-			</div>
-
-      <div class="col-3">
-				<img class="img-fluid" src="img/pngtree-notepad-icon-image_1130962.jpg">
-			</div>
-		</div>
        </div>
+                <br><br>
+       <div class="col-12">
+       <a href="mostrarRegistros.php">
+							<button id="verregsitros" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ver Registros</button>
+        </a>				
+                        </div>
+			</div>
       </div>
          <!--fin form-->
          
         </div>
-      </div>
+      
       <br>
       <footer>
         <div class="container">
@@ -186,7 +173,6 @@
             </div>
           </div>
         </div>
-        <br><br><br>
       </footer>
     </div>  <!--fin de todo-->
    
