@@ -97,19 +97,19 @@
 				<form action="crear-registro.php" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
 					<div class="row gy-3">
 						<div class="col-12 col-md-6">
-							<input id="nombre" name="crear_nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required="">
+							<input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required="">
 							
 						</div>
 						<div class="col-12 col-md-6">
-							<input id="apellido" name="crear_apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required="">
+							<input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required="">
 							
 						</div>
 						<div class="col-12">
-							<input id="email" name="crear_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
+							<input id="email" name="email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
 							
 						</div>
 						<div class="col-12">
-							<input id="password" name="crear_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
+							<input id="password" name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
 						
 						</div>
 					</div>
@@ -124,37 +124,7 @@
 					</div>
 				</form>
 
-				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-none" novalidate="">
-					<div class="row gy-3">
-						<div class="col-12">
-							<input id="ingresar_email" name="ingresar_email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
-							<div class="invalid-feedback">Ingresá tu e-mail</div>
-						</div>
-						<div class="col-12">
-							<input id="ingresar_password" name="ingresar_password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
-							<div class="invalid-feedback">Ingresá tu password</div>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col">
-							<button id="btn_ingresar" type="submit" class="btn btn-primary w-100">Ingresar</button>
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col-6">
-							<div class="form-check d-flex align-items-center justify-content-center gap-1">
-								<input name="recordarme" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
-								<label class="form-check-label" for="flexCheckChecked">
-									Recordarme
-								</label>
-							</div>
-						</div>
-						<div class="col-6">
-							<button id="btn_crear" type="button" class="btn btn-outline-info w-100">¿No tenés cuenta? Crear</button>
-						</div>
-
-					</div>
-				</form>
+	
 
 			</div>
 
