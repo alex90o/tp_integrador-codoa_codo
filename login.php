@@ -94,15 +94,15 @@
 			</div>
 
       <br>
-				<form action="cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-grid" novalidate>
+				<form action="cuenta.php" method="POST" id="cuenta_ingresar" class="needs-validation d-grid" novalidate>
 					<div class="row gy-3">
 						<div class="col-12">
 							<input id="ingresaremail" name="email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required>
-							<div class="invalid-feedback">Ingresá tu e-mail</div>
+							
 						</div>
 						<div class="col-12">
 							<input id="ingresarpassword" name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" required>
-							<div class="invalid-feedback">Ingresá tu password</div>
+							
 						</div>
 					</div>
 					<div class="row mt-4">

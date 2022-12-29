@@ -1,13 +1,4 @@
 <?php
-//echo "hola soy el regsitro";
-//nombre de BD: integrador_codo_a_codo
-
-//metodos de conexion con la mylsql -- PDO
-
-/*
-1-"localHost" ip(192.168.1.1)
-
-*/
 $username = "root";
 $password = "";
 $database = "integrador_codo_a_codo";
@@ -23,20 +14,7 @@ if(mysqli_connect_errno()){
 
 $mysqli = new mysqli("localhost", $username, $password, $database);
 if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['password']) ){
-/*
-  $nom = $_POST['nombre'];
-  $ape = $_POST['apellido'];
-  $email = $_POST['email'];
-  $pass = $_POST['password'];
-  
-  $sql = "INSERT INTO registro (nombre,apellido,correo,pass) VALUES ( :nom, :ape, :email, :pass )";
- mysqli_query($conexion,$sql);
-//  $stmt = $conexion -> prepare($sql);
-//  $stmt ->bind_param(":nombre", $nom);
-//  $stmt ->bind_param(":apell", $ape);
-//  $stmt ->bind_param(":email", $email);
-//  $stmt ->bind_param(":pass", $pass);
-*/
+
 $nom = $mysqli->real_escape_string($_POST['nombre']);
 $ape = $mysqli->real_escape_string($_POST['apellido']);
 $email = $mysqli->real_escape_string($_POST['email']);
@@ -54,21 +32,6 @@ $estado="Registro Guarado Correctamente";
 }
 
 
-var_dump($_POST);
-/*$consultas = mysqli_query($conexion,"SELECT * FROM registro");
-
-echo "<pre>";
-var_dump($consultas);
-
-echo "</pre>";
-
-$listado = mysqli_fetch_assoc($consultas);
-
-echo "<pre>";
-var_dump($listado);
-
-echo "</pre>";
-*/
 ?>
 
 <!doctype html>
