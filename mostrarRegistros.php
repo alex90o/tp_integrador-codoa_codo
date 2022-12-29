@@ -154,6 +154,8 @@ while($listado = mysqli_fetch_array($consultas)){
                           <th scope="col">Nombre</th>
                           <th scope="col">Apellido</th>
                           <th scope="col">Correo</th>
+                          <th scope="col"></th>
+                          <th scope="col"></th>
                           <!-- <th scope="col" class="not-export-col">acciones</th> -->
                         </thead>
                         <tbody>
@@ -169,6 +171,26 @@ while($listado = mysqli_fetch_array($consultas)){
                               <td><?php echo $lista['nombre'] ?></td>
                               <td><?php echo $lista['apellido'] ?></td>
                               <td><?php echo $lista['correo'] ?></td>
+                              <td class="center d-flex justify-content-between">
+                              <div class="col-sm">
+                                <form action="borrar.php" method="POST">
+                                
+                                  <input name="txtregistro" type="hidden" value="<?php echo $lista['id'] ?>">
+                                  <button type="submit" class="btn btn-danger">eliminar</button>
+                                </form>
+                              </div>
+                              </td>
+                              <td>
+                              <div class="col-sm">
+                                <form action="" method="post">
+
+                                  <input name="registro" type="hidden" value="">
+                                  <button type="submit" class="btn btn-warning">editar</button>
+                                </form>
+                              </div>
+
+                              </td>
+
 
 
                             </tr>
