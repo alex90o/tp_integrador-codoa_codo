@@ -151,7 +151,7 @@
 			</div>
 
       <div class="col-3">
-				<img class="img-fluid" src="img/pngtree-notepad-icon-image_1130962.jpg">
+				<img class="img-fluid" id="img-regsitro" src="img/pngtree-notepad-icon-image_1130962.png">
 			</div>
 		</div>
        </div>
