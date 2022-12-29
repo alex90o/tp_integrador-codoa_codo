@@ -46,8 +46,17 @@
               <li class="nav-item">
                 <a class="nav-link colorVerde" href="comprarTickets.html">Comprar tickets</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link colorCoral" href="registarse.php">Registarse</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle colorCoral" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Acciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="registarse.php">Registarse</a></li>
+                  <li><a class="dropdown-item" href="login.php">Login</a></li>
+                  <li><a class="dropdown-item" href="mostrarRegistros.php">Lista de Regsitros</a></li>
+                 
+                 
+                </ul>
               </li>
               
 
@@ -85,14 +94,14 @@
 			</div>
 
       <br>
-				<form action="mi-cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-grid" novalidate>
+				<form action="cuenta.php" method="POST" id="form_cuenta_ingresar" class="needs-validation d-grid" novalidate>
 					<div class="row gy-3">
 						<div class="col-12">
-							<input id="ingresaremail" name="ingresaremail" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required>
+							<input id="ingresaremail" name="email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required>
 							<div class="invalid-feedback">Ingresá tu e-mail</div>
 						</div>
 						<div class="col-12">
-							<input id="ingresarpassword" name="ingresarpassword" type="password" class="form-control" placeholder="Password" aria-label="Password" required>
+							<input id="ingresarpassword" name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" required>
 							<div class="invalid-feedback">Ingresá tu password</div>
 						</div>
 					</div>

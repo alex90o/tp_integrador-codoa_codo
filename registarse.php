@@ -41,15 +41,23 @@
                 <a class="nav-link" href="#lugar">El lugar y la fecha</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contenido-form">Conviértete en orador</a>
+                <a class="nav-link" href="index.html#contenido-form">Conviértete en orador</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link colorVerde" href="comprarTickets.html">Comprar tickets</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link colorCoral" href="registarse.php">Registarse</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle colorCoral" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Acciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="registarse.php">Registarse</a></li>
+                  <li><a class="dropdown-item" href="login.php">Login</a></li>
+                  <li><a class="dropdown-item" href="mostrarRegistros.php">Lista de Regsitros</a></li>
+                 
+                 
+                </ul>
               </li>
-              
 
               
            
