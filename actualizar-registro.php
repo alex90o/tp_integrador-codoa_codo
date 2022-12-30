@@ -5,6 +5,7 @@ $database = "integrador_codo_a_codo";
 $conexion = mysqli_connect("localhost",$username, $password, $database);
 $estado="";
 
+//var_dump($_POST);
 if(mysqli_connect_errno()){
 
     $estado="Error no se conecto a la base de datos";
@@ -12,26 +13,47 @@ if(mysqli_connect_errno()){
 
 
 
-$mysqli = new mysqli("localhost", $username, $password, $database);
-if(!empty($_POST['id']) &&!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['password']) ){
+//$mysqli = new mysqli("localhost", $username, $password, $database);
+//if(!empty($_POST['id']) &&!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['password']) ){
+/*
 $id = $mysqli->real_escape_string($_POST['id']);
 $nom = $mysqli->real_escape_string($_POST['nombre']);
 $ape = $mysqli->real_escape_string($_POST['apellido']);
 $email = $mysqli->real_escape_string($_POST['email']);
 $password = $mysqli->real_escape_string($_POST['password']);
-
+*/
+$id = $_POST["id"];
+$nom = $_POST["nombre"];
+$ape = $_POST["apellido"];
+$email = $_POST["email"];
+$password =$_POST['password'];
 //"UPDATE registro SET nombre=".$nom.", apellido=".$ape.", email=".$email.", pass=".$password."WHERE id=".$id;
-$query = "UPDATE registro SET nombre=".$nom.", apellido=".$ape.", email=".$email.", pass=".$password."WHERE id=".$id;
+//$query = "UPDATE registro SET nombre=".$nom.", apellido=".$ape.", email=".$email.", pass=".$password."WHERE id=".$id;
 
-$mysqli->query($query);
-$mysqli->close();
+//$mysqli->query($query);
+//$mysqli->close()
+//$sql = "UPDATE registro SET nombre=".$_POST["nombre"].", apellido=".$_POST["apellido"].", email=".$_POST["email"].", pass=".$_POST['password']."WHERE id=".$_POST["id"];
+
+//$sql = "UPDATE `registro` SET `nombre` = \'$nom\', `apellido` = \'$ape\', `correo` = \'$email\', `pass` = \'$password\' WHERE `registro`.`id` = \'$id\'";
+//$consultas = mysqli_query($conexion, $sql);
+
+$sql = "UPDATE registro SET nombre='$nom', apellido='$ape', ";
+
+$sql .= "correo='$email', pass='$password' WHERE id=$id";
+$consultas = mysqli_query($conexion, $sql);
+
 }
 
 $estado="Registro Actualizado Correctamente";
-}
+
+//echo "Datos asociados con la id: $id<br/><br/>$nom<br/>$ape<br/>$email<br/>$password<br/>";
+
+
 
 
 ?>
+
+
 
 <!doctype html>
 <html lang="es">

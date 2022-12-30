@@ -117,7 +117,7 @@ $password = $fetch['pass'];
      
 		
 			<div class="col-5">
-				<form action="actualizar-registro" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
+				<form action="actualizar-registro.php" method="POST" class="d-grid">
 					<div class="row gy-3">
 						<div class="col-12 col-md-6">
             <label for="">NOMBRE</label>
@@ -144,8 +144,8 @@ $password = $fetch['pass'];
 						
 						</div>
             <div class="col-12">
-              <label for="">ID</label>
-							<input id="id" name="id" type="text" class="form-control" placeholder="ID" disabled
+              <!-- <label for="">ID</label> -->
+							<input id="id" name="id" input type="hidden" class="form-control" placeholder="ID" 
               value="<?php echo $id ?>">
 						
 						</div>
