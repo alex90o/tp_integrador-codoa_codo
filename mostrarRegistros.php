@@ -164,10 +164,11 @@ while($listado = mysqli_fetch_array($consultas)){
 
                           $consultas = mysqli_query($conexion, "SELECT*FROM registro");
                           while ($lista = mysqli_fetch_array($consultas)) {
+                            $id = $lista['id'];
                           ?>
 
                             <tr>
-
+                            
                               <td><?php echo $lista['nombre'] ?></td>
                               <td><?php echo $lista['apellido'] ?></td>
                               <td><?php echo $lista['correo'] ?></td>
