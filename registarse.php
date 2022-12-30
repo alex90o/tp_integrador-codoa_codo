@@ -32,13 +32,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#texto-en-carousel">La conferencia</a>
+                <a class="nav-link active" aria-current="page" href="index.html#texto-en-carousel">La conferencia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#tituloOradores">Los oradores</a>
+                <a class="nav-link" href="index.html#tituloOradores">Los oradores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#lugar">El lugar y la fecha</a>
+                <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html#contenido-form">Conviértete en orador</a>

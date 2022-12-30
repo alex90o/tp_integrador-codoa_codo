@@ -38,10 +38,10 @@
                 <a class="nav-link" href="#tituloOradores">Los oradores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#lugar">El lugar y la fecha</a>
+                <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contenido-form">Conviértete en orador</a>
+                <a class="nav-link" href="index.html#contenido-form">Conviértete en orador</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link colorVerde" href="comprarTickets.html">Comprar tickets</a>
