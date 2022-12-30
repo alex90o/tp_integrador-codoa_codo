@@ -1,15 +1,13 @@
 <?php
-        //echo "estoy en borrar";
 $conexion = mysqli_connect("localhost", "root", "", "integrador_codo_a_codo");
-
+/*
 $sql = "DELETE FROM registro WHERE id=".$_POST['txtregistro'];
 $consultas = mysqli_query($conexion, $sql);
        // echo "estoy en borrar";
-
         
-        
-      //echo $_POST['txtregistro'];
-      // var_dump($_POST);
+        //echo $_POST['txtregistro'];
+      //  var_dump($_POST);
+*/      
         ?>
 <!doctype html>
 <html lang="es">
@@ -93,24 +91,73 @@ $consultas = mysqli_query($conexion, $sql);
   
     
           <!--Inici form-->
-  <div class="container">
+          <div class="container-fluid">
+  
+    
+  <!--Inici form-->
+  <div class="container" id="contenido-form-ticket">
+  <!-- <div class="row"> -->
+  <div class="row align-items-center justify-content-center">
+  <div class="row align-items-center justify-content-center gap-5">  
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
-  <h3>El Registro fue Eliminado</h3>
-  <div class="container-fluid">
-  <img class="img-fluid my-3" width="200" id="eliminar" src="img/eliminar.png" alt="eliminar">
-  <div class="row  align-items-center justify-content-center">
-						<div class="col-4">
-            <a href="index.html" ><button id="btn_submit_crear" type="submit" class="btn btn-primary w-100">Ir a Inico</button></a>
+  <h3>Editar Regsitro</h3>
+
+  </div>
+  
+     
+		
+			<div class="col-5">
+				<form action="crear-registro.php" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
+					<div class="row gy-3">
+						<div class="col-12 col-md-6">
+							<input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required="">
+							
 						</div>
-						<div class="col-4">
-							<!-- <button id="btn_volver" type="button" class="btn btn-outline-info w-100">Volver</button> -->
-              <a href="mostrarRegistros.php" class="btn btn-outline-info w-100"> Volver a Listra de Registros</a>
+						<div class="col-12 col-md-6">
+							<input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required="">
+							
+						</div>
+						<div class="col-12">
+							<input id="email" name="email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required="">
+							
+						</div>
+						<div class="col-12">
+							<input id="password" name="password" type="password" class="form-control" placeholder="Password" aria-label="Password" required="">
+						
 						</div>
 					</div>
-       </div>
-       </div> 
-      </div>
+					<div class="row mt-4">
+						<div class="col">
+							<button id="btn_submit_crear" type="submit" class="btn btn-primary w-100">Gaurdar</button>
+						</div>
+						<div class="col">
+							<!-- <button id="btn_volver" type="button" class="btn btn-outline-info w-100">Volver</button> -->
+              <a href="javascript:history.back()" class="btn btn-outline-info w-100"> Volver Atrás</a>
+						</div>
+					</div>
+				</form>
 
+	
+
+			</div>
+
+      <div class="col-3">
+				<img class="img-fluid" id="img-editar" src="img/editar.png">
+			</div>
+		</div>
+
+
+    
+
+</div>
+        <br><br>
+<div class="col-12">
+<a href="mostrarRegistros.php">
+      <button id="verregsitros" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ver Registros</button>
+</a>				
+                </div>
+</div>
+</div>
          
    
 

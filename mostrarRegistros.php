@@ -183,9 +183,9 @@ while($listado = mysqli_fetch_array($consultas)){
                               </td>
                               <td>
                               <div class="col-sm">
-                                <form action="" method="post">
+                                <form action="editar.php" method="post">
 
-                                  <input name="registro" type="hidden" value="">
+                                  <input name="registro" type="hidden" value="<?php echo $lista['id'] ?>">
                                   <button type="submit" class="btn btn-warning">editar</button>
                                 </form>
                               </div>
