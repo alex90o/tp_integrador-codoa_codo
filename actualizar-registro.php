@@ -1,24 +1,38 @@
-
 <?php
-//$link= mysqli_connect("localhost", "root", "");
-$link=mysqli_connect("localhost", "root", "","integrador_codo_a_codo");
-//mysql_select_db("integrador_codo_a_codo",$link) OR DIE ("Error: No es posible establecer la conexión");
-if($link->connect_errno > 0){
-  die('Error: No es posible establecer la conexión: [' . $link->connect_error . ']');
+$username = "root";
+$password = "";
+$database = "integrador_codo_a_codo";
+$conexion = mysqli_connect("localhost",$username, $password, $database);
+$estado="";
+
+if(mysqli_connect_errno()){
+
+    $estado="Error no se conecto a la base de datos";
+}else{
+
+
+
+$mysqli = new mysqli("localhost", $username, $password, $database);
+if(!empty($_POST['id']) &&!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['password']) ){
+$id = $mysqli->real_escape_string($_POST['id']);
+$nom = $mysqli->real_escape_string($_POST['nombre']);
+$ape = $mysqli->real_escape_string($_POST['apellido']);
+$email = $mysqli->real_escape_string($_POST['email']);
+$password = $mysqli->real_escape_string($_POST['password']);
+
+//"UPDATE registro SET nombre=".$nom.", apellido=".$ape.", email=".$email.", pass=".$password."WHERE id=".$id;
+$query = "UPDATE registro SET nombre=".$nom.", apellido=".$ape.", email=".$email.", pass=".$password."WHERE id=".$id;
+
+$mysqli->query($query);
+$mysqli->close();
 }
 
-$id=$_POST['registro'];
+$estado="Registro Actualizado Correctamente";
+}
 
-$extraerdato = $link->query("SELECT * FROM registro where id=$id");
-$fetch = mysqli_fetch_array($extraerdato);
-$nombre = $fetch['nombre'];
-$apellido = $fetch['apellido'];
-$email = $fetch['correo'];
-$password = $fetch['pass'];
 
-//echo "Datos asociados con la id: $id<br/><br/>$nombre<br/>$apellido<br/>$email<br/>$password<br/>";
- 
 ?>
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -101,90 +115,44 @@ $password = $fetch['pass'];
   
     
           <!--Inici form-->
-          <div class="container-fluid">
-  
-    
-  <!--Inici form-->
-  <div class="container" id="contenido-form-ticket">
-  <!-- <div class="row"> -->
-  <div class="row align-items-center justify-content-center">
-  <div class="row align-items-center justify-content-center gap-5">  
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
-  <h3>Editar Regsitro</h3>
+          <div class="container" id="contenido-form-ticket">
+          <!-- <div class="row"> -->
+          <div class="row align-items-center justify-content-center gap-5">  
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tituloticket">
+        <?php
+        echo "<h3>";
+        echo $estado;
+        echo "</h3>";
+        ?>
 
-  </div>
-  
-     
-		
-			<div class="col-5">
-				<form action="actualizar-registro" method="POST" id="form_cuenta_crear" class="needs-validation d-grid" novalidate="">
-					<div class="row gy-3">
-						<div class="col-12 col-md-6">
-            <label for="">NOMBRE</label>
-							<input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required
-              value="<?php echo $nombre ?>">
-							
-						</div>
-						<div class="col-12 col-md-6">
-            <label for="">APELLIDO</label>
-							<input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required
-              value="<?php echo $apellido ?>">
-							
-						</div>
-						<div class="col-12">
-            <label for="">EMAIL</label>
-							<input id="email" name="email" type="email" class="form-control" placeholder="Correo" aria-label="Correo" required
-              value="<?php echo $email ?>">
-							
-						</div>
-						<div class="col-12">
-            <label for="">PASSWORD</label>
-							<input id="password" name="password" type="text" class="form-control" placeholder="Password" aria-label="Password" required
-              value="<?php echo $password ?>">
-						
-						</div>
-            <div class="col-12">
-              <label for="">ID</label>
-							<input id="id" name="id" type="text" class="form-control" placeholder="ID" disabled
-              value="<?php echo $id ?>">
-						
-						</div>
-					</div>
-					<div class="row mt-4">
-						<div class="col">
-							<button id="btn_submit_crear" type="submit" class="btn btn-primary w-100">Gaurdar</button>
-						</div>
-						<div class="col">
-							<!-- <button id="btn_volver" type="button" class="btn btn-outline-info w-100">Volver</button> -->
-              <a href="javascript:history.back()" class="btn btn-outline-info w-100"> Volver Atrás</a>
-						</div>
-					</div>
-				</form>
-
-	
-
+          </div>
+          <div class="col-3">
+                <?php
+                if($estado=="Registro Actualizado Correctamente"){
+                    echo'<img class="img-fluid" src="img/guardado_correcto.png" alt="guardado_correcto">';
+                }
+                
+                else 
+                echo'<img class="img-fluid" src="img/guardado_incorectocorrecto.png" alt="guardado_correcto">';
+                ?>
+				
 			</div>
 
-      <div class="col-3">
-				<img class="img-fluid" id="img-editar" src="img/editar.png">
+            
+
+       </div>
+                <br><br>
+       <div class="col-12">
+       <a href="mostrarRegistros.php">
+							<button id="verregsitros" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ver Registros</button>
+        </a>				
+                        </div>
 			</div>
-		</div>
-
-
-    
-
-</div>
-        <br><br>
-<div class="col-12">
-<a href="mostrarRegistros.php">
-      <button id="verregsitros" type="submit" class="btn btn-success w-100 colorBtnEnviar">Ver Registros</button>
-</a>				
-                </div>
-</div>
-</div>
+      </div>
+         <!--fin form-->
          
-   
-
+        </div>
+      
       <br>
       <footer>
         <div class="container">
@@ -228,3 +196,4 @@ $password = $fetch['pass'];
     <script src="script.js"></script>
   </body>
 </html>
+
